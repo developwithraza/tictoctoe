@@ -12,14 +12,14 @@ var swclick=false;
  const checkWin=()=>{
      let boxtext=document.getElementsByClassName('boxtext');
      let wins=[
-         [0,1,2],
-         [3,4,5],
-         [6,7,8],
-         [0,3,6],
-         [1,4,7],
-         [2,5,8],
-         [0,4,8],
-         [6,4,2],
+         [0,1,2,2,7,0],
+         [3,4,5,2,23,0],
+         [6,7,8,2,40,0],
+         [0,3,6,-16,25,90],
+         [1,4,7,-0.5,25,90],
+         [2,5,8,15,25,90],
+         [0,4,8,1,25,45],
+         [6,4,2,3,20,135],
      ]
      wins.forEach(e=>{
         if((boxtext[e[0]].innerText===boxtext[e[1]].innerText)&& (boxtext[e[2]].innerText===boxtext[e[1]].innerText) && (boxtext[e[0]].innerText!=="")){
@@ -33,7 +33,8 @@ var swclick=false;
             gameover.play();
             winner.play();
 
-            // ;getElementsByTagName('img')[0]
+           document.querySelector(".line").style.transform=`translate(${e[3]}vw,${e[4]}vw)rotate(${e[5]}deg)`
+           document.querySelector(".line").style.width="48vw";
         }
      })
 
@@ -65,7 +66,7 @@ Array.from(boxtext).forEach(e=>{
 })
 turn="X";
     isgameover=false;
-
+    document.querySelector(".line").style.width="0px";
     document.getElementsByClassName("info")[0].innerText="Turn for" +' __'+turn;
     document.querySelector(".pogo").style.width="0px";
     document.querySelector("#fire").style.width="0px";

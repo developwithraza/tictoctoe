@@ -20,6 +20,12 @@ h2{
     text-shadow: 2px 2px 0 #050501;
     font-size: 30px;
 }
+h3{
+    color: red;
+  
+/* background: #fdfcfc; */
+text-shadow: 2px 2px 0px #fffcfc;
+}
 
 nav li{
     font-size: 30px;
@@ -43,19 +49,22 @@ nav li{
     display: flex;
     /* background-color: antiquewhite; */
     
-    height: 79vh;
+    height: 80vh;
     justify-content: center;
     /* align-items: center; */
     margin-top: 30px;
 }
 .container{
     display: grid;
-    grid-template-rows: repeat(3,10vw);
-    grid-template-columns: repeat(3,10vw);
+    grid-template-rows: repeat(3,16vw);
+    grid-template-columns: repeat(3,16vw);
     font-family: Georgia, 'Times New Roman', Times, serif;
+    position: relative;
+ 
 }
 .box{
     border: 1px solid black;
+    
     font-size: 8vw;
     cursor: pointer;
     display: flex;
@@ -69,7 +78,9 @@ nav li{
 .gameInfo{
     padding: 0 34px;
     font-family: 'Tiro Kannada', serif;
-    background-color: #caf0f8;
+    /* background-color: #caf0f8; */
+    background-color: rgba(0, 0, 0, 0.1); 
+/* color: rgba(0, 0, 0, 0.1); */
     /* margin-top: 10px; */
     margin-left: 10px;
     height: 70%;
@@ -93,8 +104,9 @@ nav li{
 }
 
 #reset{
+    width: 100%;
     padding: 4px 15px;
-    margin: 10px;
+    /* margin: 10px; */
     background-color:#03045e ;
     font-size: 16px;
     font-family: 'Tiro Kannada', serif;
@@ -115,10 +127,14 @@ color: whitesmoke;
     background-color: black;
     color: whitesmoke;
     text-align: center;
+    margin-top: 30px;
+    border-radius: 4px;
     
 }
 .footer p{
-    padding: 10px;
+   
+    padding: 6px;
+
 }
 #str{
     width: 20px;
@@ -249,3 +265,12 @@ color: whitesmoke;
     animation-delay: 28s;
 }
 /* switch music */
+.line{
+    background-color: black;
+    width: 0px;
+    height: 3px;
+    position: absolute;
+    background-color:green ;
+    border-radius: 25px;
+    transition: width 1s ease-in-out;
+}
